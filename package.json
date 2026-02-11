@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "eslint",
     "build:cf": "opennextjs-cloudflare build",
-    "preview:cf": "opennextjs-cloudflare preview"
+    "preview:cf": "opennextjs-cloudflare preview",
+    "deploy:cf": "wrangler deploy",
+    "deploy:pages": "wrangler pages deploy .open-next --project-name hackathon-devsoc --compatibility-date 2026-02-11 --compatibility-flags nodejs_compat,global_fetch_strictly_public"
   },
   "dependencies": {
     "next": "16.1.6",

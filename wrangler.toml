@@ -1,0 +1,11 @@
+name = "hackathon-devsoc"
+compatibility_date = "2026-02-11"
+compatibility_flags = ["nodejs_compat", "global_fetch_strictly_public"]
+
+# For Pages deployments
+pages_build_output_dir = ".open-next"
+
+# For Workers deployments (via wrangler deploy)
+main = ".open-next/worker.js"
+[build]
+command = "npm run build:cf -- --skipWranglerConfigCheck"
