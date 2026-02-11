@@ -1,9 +1,11 @@
 import Image from "next/image";
+import Link from "next/link";
 import type { CSSProperties } from "react";
 
-const makeStyle = (chars: number, delay: string): CSSProperties => ({
+const lineStyle = (chars: number, delay: string, speed?: string): CSSProperties => ({
   "--chars": chars,
   "--delay": delay,
+  ...(speed ? { "--speed": speed } : {}),
 });
 
 export default function Home() {
@@ -17,29 +19,42 @@ export default function Home() {
         <main className="hero">
           <span
             className="type-line title"
-            style={makeStyle(13, "0s")}
+            style={lineStyle(13, "0s", "1.1s")}
           >
             Div & Conquer
           </span>
           <span
             className="type-line subtitle"
-            style={makeStyle(14, "0.9s")}
+            style={lineStyle(14, "0.9s", "1.1s")}
           >
             Hackathon 2026
           </span>
           <span
             className="type-line meta"
-            style={makeStyle(19, "2s")}
+            style={lineStyle(19, "1.9s", "1s")}
           >
             Friday, 27 February
           </span>
           <span
             className="type-line meta"
-            style={makeStyle(36, "3.1s")}
+            style={lineStyle(36, "2.9s", "1.4s")}
           >
             Math and Industrial Psychology 1005
           </span>
+
+          <div className="cta-row" style={{ "--reveal-delay": "4.8s" } as CSSProperties}>
+            <Link className="cta" href="/rulebook">
+              Rulebook
+            </Link>
+            <Link className="cta ghost" href="/submissions">
+              Submissions
+            </Link>
+          </div>
         </main>
+
+        <footer className="footer" style={{ "--reveal-delay": "5.4s" } as CSSProperties}>
+          <Link href="/privacy">Privacy Policy</Link>
+        </footer>
       </div>
     </div>
   );
