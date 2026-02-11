@@ -10,8 +10,8 @@ export default function SubmissionsPage() {
       <div className="overlay page-shell">
         <h1 className="page-title">Submissions</h1>
         <p className="page-lede">
-          Submit your project links, demos, and documentation here once hacking begins. Submission instructions will
-          appear on this page.
+          Coming soon — you&apos;ll submit your project links, demos, and documentation here once hacking begins. Full
+          instructions will appear on this page.
         </p>
         <div className="page-nav">
           <Link href="/">← Back to Home</Link>

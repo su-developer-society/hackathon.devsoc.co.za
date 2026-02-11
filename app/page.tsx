@@ -2,10 +2,16 @@ import Image from "next/image";
 import Link from "next/link";
 import type { CSSProperties } from "react";
 
-const lineStyle = (chars: number, delay: string, speed?: string): CSSProperties => ({
+type CSSVars = CSSProperties & { [key: `--${string}`]: string | number };
+
+const lineStyle = (chars: number, delay: string, speed?: string): CSSVars => ({
   "--chars": chars,
   "--delay": delay,
   ...(speed ? { "--speed": speed } : {}),
+});
+
+const revealStyle = (delay: string): CSSVars => ({
+  "--reveal-delay": delay,
 });
 
 export default function Home() {
@@ -42,7 +48,7 @@ export default function Home() {
             Math and Industrial Psychology 1005
           </span>
 
-          <div className="cta-row" style={{ "--reveal-delay": "4.8s" } as CSSProperties}>
+          <div className="cta-row" style={revealStyle("4.8s")}>
             <Link className="cta" href="/rulebook">
               Rulebook
             </Link>
@@ -52,7 +58,7 @@ export default function Home() {
           </div>
         </main>
 
-        <footer className="footer" style={{ "--reveal-delay": "5.4s" } as CSSProperties}>
+        <footer className="footer" style={revealStyle("5.4s")}>
           <Link href="/privacy">Privacy Policy</Link>
         </footer>
       </div>
