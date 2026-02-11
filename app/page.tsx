@@ -25,30 +25,30 @@ export default function Home() {
         <main className="hero">
           <span
             className="type-line title"
-            style={lineStyle(13, "0s", "1.1s")}
+            style={lineStyle(13, "0s", "0.7s")}
           >
             Div & Conquer
           </span>
           <span
             className="type-line subtitle"
-            style={lineStyle(14, "0.9s", "1.1s")}
+            style={lineStyle(14, "0.4s", "0.7s")}
           >
             Hackathon 2026
           </span>
           <span
             className="type-line meta"
-            style={lineStyle(19, "1.9s", "1s")}
+            style={lineStyle(19, "0.9s", "0.6s")}
           >
             Friday, 27 February
           </span>
           <span
             className="type-line meta"
-            style={lineStyle(36, "2.9s", "1.4s")}
+            style={lineStyle(36, "1.4s", "0.9s")}
           >
             Math and Industrial Psychology 1005
           </span>
 
-          <div className="cta-row" style={revealStyle("4.8s")}>
+          <div className="cta-row" style={revealStyle("2.4s")}>
             <Link className="cta" href="/rulebook">
               Rulebook
             </Link>
@@ -58,7 +58,7 @@ export default function Home() {
           </div>
         </main>
 
-        <footer className="footer" style={revealStyle("5.4s")}>
+        <footer className="footer" style={revealStyle("2.9s")}>
           <Link href="/privacy">Privacy Policy</Link>
         </footer>
       </div>

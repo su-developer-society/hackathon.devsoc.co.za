@@ -99,7 +99,7 @@ body {
   visibility: hidden;
   background: transparent;
   mix-blend-mode: normal;
-  --speed: 1.2s;
+  --speed: 0.8s;
   --caret-stop: calc(var(--delay) + var(--speed));
   animation:
     typing var(--speed) steps(var(--chars)) var(--delay) forwards,
@@ -117,7 +117,7 @@ body {
   opacity: 0;
   mix-blend-mode: normal;
   animation:
-    caret 0.9s step-end var(--delay) infinite,
+    caret 0.7s step-end var(--delay) infinite,
     caret-hide 0s linear var(--caret-stop) forwards;
 }
 
@@ -277,26 +277,27 @@ body {
   padding: 12px 20px;
   border-radius: 0;
   font-weight: 700;
-  color: #0a0c16;
-  background: #ff2c98;
-  border: 2px solid #ff2c98;
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.3);
-  transition: transform 160ms ease, box-shadow 160ms ease, background 180ms ease, color 180ms ease, filter 180ms ease;
+  color: #0b1f35;
+  background: #bfe5ff;
+  border: 2px solid #bfe5ff;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+  transition: transform 160ms ease, box-shadow 160ms ease, background 180ms ease, color 180ms ease, filter 180ms ease, border-color 180ms ease;
   text-decoration: none;
 }
 
 .cta.ghost {
-  background: #ff2c98;
-  color: #0a0c16;
-  border: 2px solid #ff2c98;
+  background: #bfe5ff;
+  color: #0b1f35;
+  border: 2px solid #bfe5ff;
 }
 
 .cta:hover,
 .cta.ghost:hover {
   transform: translateY(-1px) scale(1.01);
-  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.35);
-  background: #0a0c16;
-  color: #ff2c98;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.3);
+  background: #ffffff;
+  color: #2f8ff5;
+  border-color: #ffffff;
   filter: none;
 }
 
