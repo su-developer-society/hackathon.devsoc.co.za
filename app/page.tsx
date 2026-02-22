@@ -37,15 +37,26 @@ export default function Home() {
           </span>
           <span
             className="type-line meta"
-            style={lineStyle(19, "0.9s", "0.6s")}
+            style={lineStyle(30, "0.9s", "0.6s")}
           >
-            Friday, 27 February
+            Starts: Friday, 27 February, 17:30
           </span>
           <span
             className="type-line meta"
             style={lineStyle(36, "1.4s", "0.9s")}
           >
             Math and Industrial Psychology 1005
+          </span>
+          <span
+            className="type-line meta"
+            style={lineStyle(1, "0.9s", "0.6s")}
+          >
+          </span>
+          <span
+            className="type-line meta"
+            style={lineStyle(35, "0.9s", "0.6s")}
+          >
+            Submissions Due: Tuesday, 3 March, 00:00
           </span>
 
           <div className="cta-row" style={revealStyle("2.4s")}>
@@ -57,11 +68,19 @@ export default function Home() {
             </Link>
             <Link
               className="cta ghost"
-              href="https://tally.so/r/RG5aop"
+              href="https://chat.whatsapp.com/Fw9zgPmZvgSFhSR5otOLpw?mode=gi_t"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Register Now!
+              Join The WhatsApp Group
+            </Link>
+            <Link
+              className="cta ghost"
+              href="https://forms.cloud.microsoft/r/qK55Gz2TbY"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Join Email Communication
             </Link>
           </div>
         </main>
