@@ -48,6 +48,10 @@ body {
   z-index: 2;
 }
 
+.home-pending {
+  opacity: 0;
+}
+
 .logo img {
   width: 180px;
   height: auto;

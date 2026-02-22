@@ -1,6 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
-import type { CSSProperties } from "react";
+import { useEffect, useState, type CSSProperties } from "react";
 
 type CSSVars = CSSProperties & { [key: `--${string}`]: string | number };
 
@@ -15,46 +17,68 @@ const revealStyle = (delay: string): CSSVars => ({
 });
 
 export default function Home() {
+  const [shouldAnimateTyping, setShouldAnimateTyping] = useState<boolean | null>(null);
+
+  useEffect(() => {
+    const storageKey = "devsoc-home-typing-seen-v1";
+
+    try {
+      const seen = window.localStorage.getItem(storageKey) === "1";
+      if (seen) {
+        setShouldAnimateTyping(false);
+        return;
+      }
+
+      window.localStorage.setItem(storageKey, "1");
+      setShouldAnimateTyping(true);
+    } catch {
+      setShouldAnimateTyping(true);
+    }
+  }, []);
+
+  const animateTyping = shouldAnimateTyping === true;
+  const revealDelay = (delay: string) => (animateTyping ? delay : "0s");
+
   return (
     <div className="bg">
-      <div className="overlay">
+      <div className={`overlay ${shouldAnimateTyping === null ? "home-pending" : ""}`}>
         <div className="logo">
           <Image src="/logo.svg" alt="Div & Conquer logo" width={180} height={56} priority />
         </div>
 
         <main className="hero">
           <span
-            className="type-line title"
-            style={lineStyle(13, "0s", "0.7s")}
+            className={animateTyping ? "type-line title" : "title"}
+            style={animateTyping ? lineStyle(13, "0s", "0.7s") : undefined}
           >
             Div & Conquer
           </span>
           <span
-            className="type-line subtitle"
-            style={lineStyle(14, "0.4s", "0.7s")}
+            className={animateTyping ? "type-line subtitle" : "subtitle"}
+            style={animateTyping ? lineStyle(14, "0.4s", "0.7s") : undefined}
           >
             Hackathon 2026
           </span>
           <span
-            className="type-line meta"
-            style={lineStyle(24, "0.9s", "0.6s")}
+            className={animateTyping ? "type-line meta" : "meta"}
+            style={animateTyping ? lineStyle(24, "0.9s", "0.6s") : undefined}
           >
             Hackathon Opening Event
           </span>
           <span
-            className="type-line meta"
-            style={lineStyle(65, "1.4s", "1.1s")}
+            className={animateTyping ? "type-line meta" : "meta"}
+            style={animateTyping ? lineStyle(65, "1.4s", "1.1s") : undefined}
           >
             Math and Industrial Psychology 1005 at 5:30 Friday, 27 February 2026.
           </span>
           <span
-            className="type-line meta"
-            style={lineStyle(35, "0.9s", "0.6s")}
+            className={animateTyping ? "type-line meta" : "meta"}
+            style={animateTyping ? lineStyle(35, "0.9s", "0.6s") : undefined}
           >
             Submissions Due: Tuesday, 3 March, 11:59 PM
           </span>
 
-          <div className="cta-row" style={revealStyle("2.4s")}>
+          <div className="cta-row" style={revealStyle(revealDelay("2.4s"))}>
             <Link className="cta" href="/rulebook">
               Rulebook
             </Link>
@@ -79,12 +103,12 @@ export default function Home() {
             </Link>
           </div>
 
-          <p className="hero-note" style={revealStyle("2.6s")}>
+          <p className="hero-note" style={revealStyle(revealDelay("2.6s"))}>
             Redesign the SU CS Dept Website, see the <Link href="/rulebook">rule book</Link> for more info.
           </p>
         </main>
 
-        <footer className="footer" style={revealStyle("2.9s")}>
+        <footer className="footer" style={revealStyle(revealDelay("2.9s"))}>
           <Link href="/privacy">Privacy Policy</Link>
         </footer>
       </div>
