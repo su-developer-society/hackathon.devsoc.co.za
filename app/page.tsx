@@ -37,26 +37,21 @@ export default function Home() {
           </span>
           <span
             className="type-line meta"
-            style={lineStyle(30, "0.9s", "0.6s")}
+            style={lineStyle(24, "0.9s", "0.6s")}
           >
-            Starts: Friday, 27 February, 17:30
+            Hackathon Opening Event
           </span>
           <span
             className="type-line meta"
-            style={lineStyle(36, "1.4s", "0.9s")}
+            style={lineStyle(65, "1.4s", "1.1s")}
           >
-            Math and Industrial Psychology 1005
-          </span>
-          <span
-            className="type-line meta"
-            style={lineStyle(1, "0.9s", "0.6s")}
-          >
+            Math and Industrial Psychology 1005 at 5:30 Friday, 27 February 2026.
           </span>
           <span
             className="type-line meta"
             style={lineStyle(35, "0.9s", "0.6s")}
           >
-            Submissions Due: Tuesday, 3 March, 00:00
+            Submissions Due: Tuesday, 3 March, 11:59 PM
           </span>
 
           <div className="cta-row" style={revealStyle("2.4s")}>
@@ -83,6 +78,10 @@ export default function Home() {
               Join Email Communication
             </Link>
           </div>
+
+          <p className="hero-note" style={revealStyle("2.6s")}>
+            Redesign the SU CS Dept Website, see the <Link href="/rulebook">rule book</Link> for more info.
+          </p>
         </main>
 
         <footer className="footer" style={revealStyle("2.9s")}>

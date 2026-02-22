@@ -13,9 +13,11 @@
     "deploy:pages": "wrangler pages deploy .open-next --project-name hackathon-devsoc --compatibility-date 2026-02-11 --compatibility-flags nodejs_compat,global_fetch_strictly_public"
   },
   "dependencies": {
+    "lucide-react": "^0.575.0",
     "next": "16.1.6",
     "react": "19.2.3",
-    "react-dom": "19.2.3"
+    "react-dom": "19.2.3",
+    "react-icons": "^5.5.0"
   },
   "devDependencies": {
     "@opennextjs/cloudflare": "^1.16.4",
