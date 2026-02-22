@@ -55,6 +55,14 @@ export default function Home() {
             <Link className="cta ghost" href="/submissions">
               Submissions
             </Link>
+            <Link
+              className="cta ghost"
+              href="https://tally.so/r/RG5aop"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Register Now!
+            </Link>
           </div>
         </main>
 
