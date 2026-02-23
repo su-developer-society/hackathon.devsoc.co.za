@@ -39,7 +39,7 @@ export default function SubmissionsPage() {
             <div className="sub-actions">
               <a
                 className="sub-btn"
-                href="/2026%20DevSoc%20Hackathon%20Submission.pdf"
+                href="/hackathon-submission-form-2026.pdf"
                 download
               >
                 <Download size={16} /> Download Submission Form PDF
