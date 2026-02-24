@@ -173,7 +173,8 @@ body {
 .bg {
   position: relative;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
+  min-height: 100dvh;
   overflow: hidden;
   background:
     radial-gradient(1400px 980px at 16% 10%, rgba(28, 152, 214, 0.9) 0%, transparent 55%),
@@ -258,10 +259,73 @@ body {
 
   .hero {
     gap: 6px;
+    width: 100%;
+    max-width: 620px;
   }
 
   .title {
+    font-size: clamp(34px, 12vw, 54px);
     line-height: 1.08;
+  }
+
+  .subtitle {
+    font-size: clamp(20px, 7vw, 30px);
+  }
+
+  .meta,
+  .hero-note {
+    font-size: clamp(14px, 4vw, 17px);
+    line-height: 1.4;
+  }
+
+  .type-line {
+    width: auto;
+    white-space: normal;
+    padding-right: 0;
+    opacity: 1;
+    visibility: visible;
+    animation: none;
+  }
+
+  .type-line::after {
+    display: none;
+    animation: none;
+  }
+
+  .cta-row {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .cta {
+    width: 100%;
+    min-height: 46px;
+    text-align: center;
+    padding: 11px 14px;
+  }
+
+  .footer {
+    padding-top: 18px;
+  }
+}
+
+@media (max-width: 420px) {
+  .overlay {
+    padding: 18px 14px;
+  }
+
+  .logo img {
+    width: 132px;
+  }
+
+  .hero {
+    gap: 5px;
+  }
+
+  .hero-note {
+    margin-top: 10px;
   }
 }
 
