@@ -52,11 +52,20 @@ body {
   opacity: 0;
 }
 
-.logo img {
+.logo-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  width: 100%;
+}
+
+.logo-row img {
   width: 180px;
   height: auto;
   display: block;
   filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.45));
+  flex-shrink: 0;
 }
 
 .hero {
@@ -253,8 +262,14 @@ body {
     padding: 24px clamp(16px, 6vw, 28px);
   }
 
-  .logo img {
-    width: 150px;
+  .logo-row {
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .logo-row img {
+    width: 120px;
   }
 
   .hero {
@@ -316,8 +331,12 @@ body {
     padding: 18px 14px;
   }
 
-  .logo img {
-    width: 132px;
+  .logo-row {
+    gap: 10px;
+  }
+
+  .logo-row img {
+    width: 72px;
   }
 
   .hero {

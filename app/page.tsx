@@ -42,8 +42,15 @@ export default function Home() {
   return (
     <div className="bg">
       <div className={`overlay ${shouldAnimateTyping === null ? "home-pending" : ""}`}>
-        <div className="logo">
+        <div className="logo-row">
           <Image src="/logo.svg" alt="Div & Conquer logo" width={180} height={56} priority />
+          <Image src="/logo_2.png" alt="Sponsor logo 2" width={180} height={56} />
+          <Link href="https://canary.tools/" target="_blank" rel="noopener noreferrer">
+            <Image src="/logo_3.png" alt="Sponsor logo 3" width={180} height={56} />
+          </Link>
+          <Link href="https://mwrcybersec.com/" target="_blank" rel="noopener noreferrer">
+            <Image src="/logo_4.png" alt="Sponsor logo 4" width={180} height={56} />
+          </Link>
         </div>
 
         <main className="hero">
